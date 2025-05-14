@@ -1,7 +1,5 @@
+import Login from "./Login";
+
 export default function App() {
-  return (
-    <div className="text-3xl font-bold text-blue-600 p-10">
-      Hello, Tailwind is working!
-    </div>
-  );
+  return <Login></Login>;
 }
