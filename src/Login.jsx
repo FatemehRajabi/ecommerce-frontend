@@ -7,6 +7,13 @@ export default function Login(){
     function handleSubmit(e){
         e.preventDefault();
         console.log(email, password);
+        fetch("http://localhost:8080/api/auth/login",
+            {method: "POST",
+            body: JSON.stringify({username: email , password: password}),
+            headers: {
+                "Content-Type": "application/json"
+            }
+    }).then(res => res.json()).then(data => console.log(data))
     }
 
     return(
